@@ -5,51 +5,26 @@ import BuildPersonalInfoForm from "./components/BuildPersonalInfoForm";
 import BuildExperienceInfoForm from "./components/BuildExperienceInfoForm";
 import BuildEducationInfoForm from "./components/BuildEducationInfoForm";
 
-class App extends Component {
-  constructor() {
-    super();
-    
-    this.state = {
-      general: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        aboutMe: '',
-      },
-      education: {
-        school: '',
-        major: '',
-        graduation: '',
-      },
-      experience: {
-        company: '',
-        position: '',
-        tasks: '',
-        employment: '',
-      }
-
-    }
+function App() {
+  function addExperience() {
+    BuildExperienceInfoForm();
+    console.log('click');
   }
-
-  render() {
-
-    return(
-      <div id="container">
-        <div id='cvHeader'>
-          head
-        </div>
-        <div id="cvBody">
+  return(
+    <div>
+      <div id='cvBody'>
+        <div id='personalInfo'>
           <BuildPersonalInfoForm/>
+        </div>
+        <div id='experienceInfo'>
           <BuildExperienceInfoForm/>
+          <button onClick={addExperience}>Click Me!</button>
+        </div>
+        <div id='educationInfo'>
           <BuildEducationInfoForm/>
         </div>
-        <div id='cvFooter'>
-          foot
-        </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
-
 export default App;

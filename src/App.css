@@ -22,3 +22,10 @@ form {
     border-radius: 15px;
 }
 
+#aboutMe {
+    display: flex;
+    text-align: start;
+    height: 3rem;
+
+}
+

@@ -8,7 +8,7 @@ function BuildPersonalInfoForm() {
             <input placeholder="Last Name"/>
             <input placeholder="Phone Number"/>
             <input placeholder="Email"/>
-            <input placeholder="About Me"/>
+            <textarea placeholder="About Me" rows='3'/>
         </form>
     )
 }
